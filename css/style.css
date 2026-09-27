@@ -264,6 +264,9 @@
   }
   .form-field input:focus ~ svg, .form-field textarea:focus ~ svg{stroke:var(--cyan);}
   .form-submit-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .contact-form .form-submit-row .btn:not(:hover){
+    background-color:var(--magenta);border-color:var(--magenta);color:var(--bg);
+  }
   .form-status{font-family:var(--font-mono);font-size:12px;color:var(--muted);}
   .form-status.success{color:var(--cyan);}
   @media (max-width:600px){.contact-form{padding:32px 22px;}}
@@ -396,7 +399,7 @@
   /* BUTTON RIPPLE (micro-interaction) */
   .btn, .filter-btn{position:relative;overflow:hidden;}
   .ripple{
-    position:absolute;border-radius:50%;background:rgba(2, 25, 58, 0.55);
+    position:absolute;border-radius:50%;background:rgba(255,255,255,0.55);
     transform:scale(0);animation:rippleAnim .6s ease-out forwards;pointer-events:none;
   }
   @keyframes rippleAnim{to{transform:scale(1);opacity:0;}}
